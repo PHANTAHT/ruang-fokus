@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ruang Fokus — Satu langkah setiap hari</title>
+  <meta name="description" content="Atur tugas, pilih prioritas, dan bangun waktu fokus. Planner sederhana yang menyimpan data di perangkatmu.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23245145'/%3E%3Cpath d='M12 22l6 6 11-16' fill='none' stroke='%23d9ecb8' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <header><a class="brand" href="./"><span class="brand-mark">✓</span>ruang<span>fokus.</span></a><div class="header-note"><span class="status-dot"></span> Ruang kecil untuk hari yang berarti</div></header>
+    <main>
+      <section class="intro"><div><p class="eyebrow" id="date"></p><h1>Pelan-pelan,<br><em>tetap melangkah.</em></h1><p class="intro-copy">Rapikan pikiranmu. Pilih yang penting. Mulai satu per satu.</p></div><div class="illustration" aria-hidden="true"><div class="orbit"></div><div class="leaf leaf-one"></div><div class="leaf leaf-two"></div><div class="stem"></div><div class="pot"></div><span class="spark s1">✦</span><span class="spark s2">✦</span></div></section>
+      <section class="stats" aria-label="Ringkasan tugas"><div><span class="stat-icon">☷</span><p><strong id="total">0</strong><span>Total tugas</span></p></div><div><span class="stat-icon">✓</span><p><strong id="completed">0</strong><span>Sudah selesai</span></p></div><div><span class="stat-icon">◷</span><p><strong id="remaining">0</strong><span>Masih menunggu</span></p></div><div class="progress-stat"><p><strong id="percentage">0%</strong><span>Langkah terselesaikan</span></p><div class="progress-track"><div id="progress"></div></div></div></section>
+      <div class="workspace">
+        <section class="tasks panel"><div class="section-heading"><div><p class="eyebrow">SEDIKIT DEMI SEDIKIT</p><h2>Daftar tugasmu</h2></div><span class="small-label">Buat ruang untuk yang penting</span></div>
+          <form id="task-form"><label class="sr-only" for="task-input">Tugas baru</label><input id="task-input" maxlength="160" placeholder="Apa yang ingin kamu selesaikan?" required autocomplete="off"><div class="form-bottom"><label for="priority">Prioritas <select id="priority"><option value="normal">Normal</option><option value="high">Penting</option><option value="low">Santai</option></select></label><button class="primary" type="submit">+ Tambah tugas</button></div></form>
+          <div class="list-toolbar"><div class="filters" aria-label="Filter tugas"><button type="button" class="active" data-filter="all" aria-pressed="true">Semua</button><button type="button" data-filter="active" aria-pressed="false">Aktif</button><button type="button" data-filter="done" aria-pressed="false">Selesai</button></div><span id="list-count"></span></div>
+          <ul id="task-list"></ul><div id="empty" class="empty"><span>✧</span><h3>Mulai dengan satu hal kecil.</h3><p>Tambahkan tugas pertamamu di atas.<br>Langkah kecil juga sebuah kemajuan.</p></div>
+        </section>
+        <aside><section class="timer panel"><p class="eyebrow">WAKTU UNTUK HADIR</p><h2>Sesi fokus</h2><p class="muted">Satu tugas. Tanpa terburu-buru.</p><div class="timer-modes"><button type="button" class="active" data-minutes="25" aria-pressed="true">Fokus</button><button type="button" data-minutes="5" aria-pressed="false">Istirahat</button></div><div class="timer-ring"><span id="timer-display" role="timer">25:00</span><span id="timer-caption">MENIT UNTUK DIRIMU</span></div><div class="timer-controls"><button type="button" id="timer-toggle" class="primary">Mulai fokus <span>▷</span></button><button type="button" id="timer-reset" class="reset" aria-label="Reset timer">↺</button></div><p class="timer-tip" id="timer-tip">Singkirkan distraksi, ambil napas, lalu mulai.</p></section><section class="quote"><span>“</span><p>Kamu tidak perlu menyelesaikan semuanya hari ini. Cukup lakukan satu hal dengan baik.</p><small>PENGINGAT KECIL UNTUKMU</small></section></aside>
+      </div>
+    </main><footer><span>Dibuat untuk hari yang lebih tenang.</span><span>◈ Data tersimpan di browser ini</span></footer>
+  </div><div id="notification" class="notification" role="status" aria-live="polite"></div>
+</body></html>
