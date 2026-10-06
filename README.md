@@ -61,6 +61,22 @@ Pengguna menentukan tujuan dan menghubungkan akun GitHub. AI membantu memilih im
 
 Pemeriksaan DOM simulasi bukan pengujian menyeluruh pada semua browser dan ukuran layar. Dukungan WebMCP opsional diuji pada konteks simulasi, belum diverifikasi pada browser yang mendukung API tersebut.
 
+## AI tool, coding agent, dan skill tambahan
+
+**Coding agent yang digunakan: OpenAI Codex.** Codex membantu merumuskan ide, merancang UI, menulis HTML/CSS/JavaScript, memeriksa fungsi, membuat commit, memperbarui repository, dan melakukan deployment.
+
+Skill dan integrasi yang digunakan:
+
+| Skill atau integrasi | Bantuan pada proyek |
+| --- | --- |
+| Sites Building | Memandu struktur proyek statis, tampilan responsif, aksesibilitas, favicon, dan persiapan situs. |
+| Sites Hosting | Membantu membuat repository hosting awal, mengirim source, mengemas aset, dan memverifikasi deployment awal di Sites sebelum publikasi GitHub Pages. |
+| Plugin Management | Menemukan integrasi GitHub dan memeriksa status pemasangannya saat akses GitHub belum tersedia. |
+| Computer Use | Mengoperasikan browser untuk membuat repository GitHub, mengaktifkan Pages, menjalankan ulang workflow, dan memeriksa halaman demo. |
+| Integrasi GitHub | Memverifikasi akun, mengirim file melalui commit pada branch utama, serta membaca dan memperbarui README. |
+
+Skill merupakan panduan kerja untuk agent; integrasi GitHub menyediakan akses ke layanan. Keduanya digunakan selama pengembangan, bukan dependency yang perlu dipasang oleh pengguna aplikasi.
+
 ## Keputusan teknis
 
 | Keputusan | Alasan dan konsekuensi |
